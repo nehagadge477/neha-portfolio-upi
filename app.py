@@ -50,9 +50,9 @@ st.markdown(
 # Data loader (uploaded or default)
 # ---------------------------
 @st.cache_data
-def load_from_path(path="data/UPI+Transactions.xlsx"):
+def load_from_path(path="filtered_upi_transactions.csv"):
     try:
-        df = pd.read_excel(path, engine="openpyxl")
+        df = pd.read_csv(path, engine="openpyxl")
         return df
     except Exception:
         return None
